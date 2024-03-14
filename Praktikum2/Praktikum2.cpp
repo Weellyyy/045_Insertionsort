@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+int arr[9];
+int n;
 
 void input() {       // procedur untuk input
     while (true) {
@@ -26,8 +28,7 @@ void input() {       // procedur untuk input
 
 void inserionSort() {
 	int i, temp, j;
-	int arr[9];
-    int n;
+    
 
 	for (i = 1; i <= n - 1; i++) { // step 1
 
@@ -44,10 +45,28 @@ void inserionSort() {
 	}
 }
 
+void display() {
+    cout << endl;
+    cout << "=====" << endl;
+    cout << "Element Array yang telah tersusun" << endl;
+    cout << "=====" << endl;
+    cout << endl;
+    for (int j = 0; j < n; j++) {
+        cout << arr[j];
+        if (j < n - 1) {
+            cout << "-->";
+        }
+    }
+    cout << endl;
+    cout << endl;
+    cout << "Jumlah pass = " << n - 1 << endl;
+    cout << endl;
+}
 
 int main()
 {
 	input();
 	inserionSort();
+    display
 
 }
